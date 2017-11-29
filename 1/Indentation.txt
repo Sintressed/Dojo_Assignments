@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           <h1> My Registration Form </h1>
+        </title>
+    </head>
+    <body>
+        <label for = "First_Name">First Name </label> 
+        <Input type = "text" id = "First_Name" name = "First_Name">
+        <br>
+        <label for = "Last_Name">Last Name </label> 
+        <Input type = "text" id = "Last_Name" name = "Last_Name">
+        <br>
+        <label for = "Email">Email </label> Email
+        <Input type = "text" id = "Email" name = "Email">
+        <br>
+        <label for = "Password">Password </label> 
+        <Input type = "text" id = "Password" name = "Password">
+        <br>
+        <label for = "Password_Confirm" > PW Confirm </label> 
+        <Input type = "text" id = "Password_Confirm" name = "Password_Confirm" >
+        <br>
+        <label for = "Birthday" > Birthday </label> 
+        <input type = "date" id = "Birthday" name = "Birthday>
+        <br>
+        <input type = "Radio" id = "Gender" Name = "Male"
+        <label for = "Gender"> Male </label>
+        <input type = "Radio" id = "Gender" Name = "Female"
+        <label for = "Gender"> Female </label>
+        <input type = "Radio" id = "Gender" Name = "Other"
+        <label for = "Gender"> Other </label>
+        <br>
+        <label for = "Description"> A short Description about yourself</Label>
+        <br>
+        <textarea name = "Description"> </textarea>
+        <br>
+        <label for = "favorite_Language">Favorite Language</Label>
+        <select name = "favorite_Language"> 
+        <option value = "Javascript"> JavaScript</option>
+        <option value = "Css"> Css </option>
+        <option value = "HTML"> HTML </option>
+        </select>
+         <input type="submit" value="submit">
+
+
+        
+
+
+    </body>
+</html>
