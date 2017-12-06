@@ -1,0 +1,41 @@
+body *{
+	padding:0px;
+	margin:0px;
+    font-family: Arial;
+
+}
+.wrapper{
+    width: 970 px;
+    Margin: auto;
+    background-color: Blue;
+}
+.header{
+    display: block;
+    height: 150px;
+    background-color: lightblue;
+    padding: 10px;
+}
+.header img{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+}
+.top{
+    display: inline-block;
+    text-align: right;
+    margin: auto;
+    vertical-align: top;
+    overflow: hidden;
+}
+.bottom{
+    background-color: darkblue;
+    display: inline-block;
+    padding: 5px;
+    margin: auto;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+.bottom input{
+    text-align: justify;
+    display: inline-block;
+}
