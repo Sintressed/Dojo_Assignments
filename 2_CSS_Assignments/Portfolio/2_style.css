@@ -6,7 +6,8 @@ body *{
 
 .wrapper {
 	width:960px;
-    height:1000px;
+	height:1000px;
+	margin: auto;
 }
 .header {
 	width:938px;
@@ -77,8 +78,9 @@ body *{
 .projects img{
 	border:none;
 }
-.project p{
-	width: 278;
+.projects p{
+	font-size: 90%;
+	text-align: justify;
 }
 .tech_images {
 	padding:15px 0px 0px 12px;
@@ -106,15 +108,15 @@ body *{
 }
 .footer p
 {
-	margin:auto;
-    width: 240px;
-    display: inline-block;
-
-
+	margin-left:350px;
+	margin-right:350px;
+	text-align: center;
+	
 }
 .footer ul {
-	width: 380px;
+	width: 100%;;
 	margin:auto;
+	text-align: center;
 }
 .footer ul li {
 	display:inline-block;
