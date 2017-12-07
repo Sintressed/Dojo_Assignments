@@ -43,25 +43,29 @@ body *{
     height: 27px;
     background-color: white;
     border:1px black;
+    margin-top: 6px;
 }
 .search button{
     background-color: 135cd3;
     width: 38px;
     height: 23px;
     border-radius: 5px;
-    box-shadow: 2px lightgray;
+    box-shadow: 2px 2px 2px 2px black;
 }
 .buttons{
     background-color: #5387db;
     text-align: center;
     height: 50px;
+    margin: 0px 26px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #33363a;
 }
 .buttons button{
     color: white;
 }
 .buttons li{
     display: inline-block;
-    margin: 0px 50px;
+    margin: 0px 46px;
     padding: 17px 0px;
 }
 .links{
@@ -75,6 +79,7 @@ body *{
 }
 .links a{
     color: white;
+    text-decoration: underline white;
 }
 .paragraph_spacing{
     display:inline-block;
@@ -107,6 +112,7 @@ body *{
 .middle_content{
     display: block;
     background-color:white;
+    outline: 2px black;
 }
 .left{
     display: inline-block;
@@ -117,6 +123,7 @@ body *{
 }
 .left h3{
     text-align: center;
+    margin-top: 10px;
 }
 .left p{
     text-align: center;
@@ -127,6 +134,9 @@ body *{
     margin-top: 10px;
     list-style: square inside none;
 }
+.left a{
+    color: lightblue;
+}
 .right{
     display: inline-block;
     width:480px;
@@ -135,6 +145,7 @@ body *{
 }
 .right h3{
     text-align: center;
+    margin-top: 10px;
 }
 .right p{
     text-align: center;
@@ -143,7 +154,11 @@ body *{
 .right li{
     text-align: center;
     list-style: square inside none;
-} 
+    padding-left: 0px;
+}
+.right a{
+    color: lightblue;
+}
 .footer{
     display: block;
     width: 970px;
