@@ -2,6 +2,7 @@ body *{
 	padding:0px;
 	margin:0px;
     font-family: Arial;
+    background:none;border:0px
 
 }
 .wrapper{
@@ -11,31 +12,49 @@ body *{
 }
 .header{
     display: block;
-    height: 150px;
+    height: 110px;
     background-color: lightblue;
     padding: 10px;
 }
 .header img{
     display: inline-block;
-    height: 100%;
-    width: 50%;
+    width: 466px;
 }
-.top{
+.header_right{
     display: inline-block;
-    text-align: right;
-    margin: auto;
+    margin-left: 240px;
+    text-align: center;
     vertical-align: top;
-    overflow: hidden;
+
 }
-.bottom{
-    background-color: darkblue;
-    display: inline-block;
-    padding: 5px;
-    margin: auto;
-    vertical-align: bottom;
-    overflow: hidden;
+.Search{
+    background-color: grey;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 15px 7px 4px 10px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 2px black;
 }
-.bottom input{
-    text-align: justify;
+.search input{
+    width: 166px;
+    height: 27px;
+    background-color: white;
+    border:1px black;
+}
+.search button{
+    background-color: blue;
+    width: 38px;
+    height: 23px;
+    border-radius: 5px;
+    box-shadow: 2px lightgray;
+}
+.buttons{
+    background-color: blue;
+    text-align: center;
+}
+.buttons li{
     display: inline-block;
+    margin: 0px 50px 0px 50px;
+    text-decoration-color: white;
 }
