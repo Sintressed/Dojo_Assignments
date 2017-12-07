@@ -1,0 +1,52 @@
+body *{
+	padding:0px;
+	margin:0px;
+    font-family: Arial;
+    background:none;
+    border:0px;
+    list-style: none;
+    text-decoration: none;
+}
+.wrapper{
+    width:970px;
+    margin:auto;
+    background-color: white;
+}
+.header{
+    display: inline-block;
+    background-color: red;
+    width: 960px;
+}
+.header a{
+    color:lightblue;
+}
+.header img{
+    display: inline-block;
+    padding: none;
+}
+.header h2{
+    display: inline-block;
+    text-align: left;
+    color: gray;
+}
+.header h3{
+    background-color: blue;
+    padding: 10px;
+    color:white;
+}
+.sidebar{
+    text-align: left;
+    width: 275px;
+    display: inline-block;
+    background-color:purple;
+}
+.dojoad{
+    display: block;
+}
+.main_content{
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    background-color:pink;
+    width:670px;
+}
