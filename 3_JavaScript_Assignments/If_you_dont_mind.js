@@ -1,6 +1,6 @@
-var HOUR = 12;
-var MINUTE = 32;
-var PERIOD = "PM";
+var HOUR = 8;
+var MINUTE = 50;
+var PERIOD = "AM";
 var saying = ""
 var morning = "in the morning";
 var evening = "in the evening";
