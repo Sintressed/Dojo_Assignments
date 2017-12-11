@@ -1,0 +1,13 @@
+var decimal = 1.6;
+var whole_number = 3;
+var negative_number = -7;
+var large_number = 1216;
+var String_pet = "dog";
+var String_object = "ball";
+var dog_has_Ball = true;
+var dog_no_ball = false;
+var Undefined;
+console.log("favorite numbers",decimal,whole_number,negative_number,large_number);
+console.log("favorite things",String_pet,String_object);
+console.log("does dog have ball?",dog_has_Ball);
+console.log("what is this variable",undefined);
