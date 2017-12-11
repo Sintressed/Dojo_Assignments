@@ -8,60 +8,64 @@
         <div class = "wrapper">
             <div class = "Header">
                 <img src = "./images/globe.png" Alt = "globe.png" width="100px" Height= "100px">
-                <h2>The Inter<a href = "">net</a></h2>
+                <h2>The Inter<span class = "blue">net</span></h2>
                 <h3>The World Wide Web</h3>
             </div>
             <div class = "Sidebar">
-                <h2>So, What's an <a href = "">Internet?</a></h2>
-                <p>And interconnected network of computers all around the world!</p>
-                <button>Watch A Video</button>
-                <button>More Resources</button>
+                <h2>So, What's an <span class = "red">Internet?</span></h2>
+                <p>And <span class = "blue">inter</span>connected <span class = "blue">net</span>work of computers all around the world!</p>
+                <button class = "Watch_Video">Watch A Video</button>
+                <button class = "More_resources">More Resources</button>
+                <div class='line'></div>
                 <div class = "DojoAd">
-                    <div class = "align"><h1>Reinvent your career in just 14 weeks</h1>
-                        <img src = "./images/ninja.png" alt = "Ninja.png" id = "Ninja">
-                        <button>Learn More >>></button>
-                    </div> 
+                        <h1>Reinvent your career in just 14 weeks</h1>
+                        <img src = "./images/ninja.png" alt = "Ninja.png" width="136px" height= "138px">
+                        <button>Learn More >>></button> 
                 </div>
             </div>
         <div class = "Main_Content">
-            <img src = "./images/home.png" alt = "home.png">
-            <h4>DNS</h4>
-            <h5>Mon-Fri 9 a.m. - 5 p.m. (EST)</h5>
-            <img src = "./images/phone.png">
-            <h2>855.967.3787</h2>
-            <h5>international +1 .617.963.0555</h5>
-            <h2>Clients And Servers</h2>
-            <p>Computers connected to the <a href = "">Web</a> are called <b>clients</b> and <b>servers</b>.</p>
-            <ul>
-                <li><a href = "">Clients</a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Duis lectus massa, maximus ac lacus a, facilisis lacinia mi. Nam eget purus laoreet, sollicitudin dolor interdum, malesuada elit. 
-                    Etiam fringilla fermentum libero, in gravida sem congue sit amet. <a href = "">Web-Accessing Computer Software</a>Fusce ac viverra justo. Praesent dignissim, eros vel semper viverra,
-                    diam nisi cursus massa, aliquet imperdiet odio urna et mi. Sed aliquet porttitor augue, ut venenatis lectus laoreet at. 
-                    In eu pretium felis. Vestibulum porta eros sit amet dignissim rhoncus.</li>
-                <li><a href = "">Servers</a>Lorem ipsum dolor sit amet, consectetur adipiscing elit<a href = "">Webpages,</a><a href="">Sites</a>, or <a href = "">apps</a>. 
-                    Duis lectus massa, maximus ac lacus a, facilisis lacinia mi. Nam eget purus laoreet, sollicitudin dolor interdum, malesuada elit. 
-                    Etiam fringilla fermentum libero, in gravida sem congue sit amet.Fusce ac viverra justo. Praesent dignissim, eros vel semper viverra,
-                    diam nisi cursus massa, aliquet imperdiet odio urna et mi. Sed aliquet porttitor augue, ut venenatis lectus laoreet at. 
-                    In eu pretium felis. Vestibulum porta eros sit amet dignissim rhoncus.</li>
-            </ul>
-            <img src = "./images/client_server.png">
-            <h2>So What Actually Happens?</h2>
-            <ol>
-                <li>Lorem ipsum dolor sit amet<a href = "">DNS Server</a> consectetur adipiscing elit<a href = "">server</a>. Nullam urna nulla, suscipit.</li>
-                <li>Lorem ipsum dolor sit amet<a href = "">HTTP Request</a> consectetur adipiscing elit. Nullam urna nulla, suscipit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit<a href = "">"200 OK" message</a> Nullam urna nulla, suscipit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam urna nulla, suscipit.</li>
-            </ol>
+            <div class = "left">
+                <img src = "./images/home.png" alt = "home.png">
+                <h4>DNS</h4>
+            </div>
+            <div class = "right">
+                <h5>Mon-Fri 9 a.m. - 5 p.m. (EST)</h5>
+                <img src = "./images/phone.png" alt= "phone.img">
+                <h2>855.967.3787</h2>
+                <h5>international +1 .617.963.0555</h5>
+            </div>
+            <div id = "Horiz_line"></div>
+            <div class = "middle">
+                <h2>Clients And Servers</h2>
+                <p>Computers connected to the <span class = "lblue">Web</span> are called <b>clients</b> and <b>servers</b>.</p>
+                <ul>
+                    <li><span class = "lblue">Clients</span> are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected
+                    to your mobile network)and <span class = "lblue">Web-accessing software</span></li> available on those devices (usually a web browser like Firefox or Chrome).
+                    <li><span class = "lblue">servers</span> are computers that store <span class = "lblue">webpages</span>,<span class = "lblue">sites</span>, or apps
+                    <span class = "lblue">apps</span>. When a client device wants to access a webpage, a copy of the webpage is downloaded
+                    from the server onto the client machine to be displayed in the user's web browser.</li>
+                </ul>
+                <img src = "./images/client_server.jpg">
+                <h2>So What Actually Happens?</h2>
+                <ol>
+                    <li>The browser goes to the<span class = "lblue">DNS Server</span> consectetur adipiscing elit<span class = "lblue">server</span> that the website lives on.</li>
+                    <li>The browser sends an<span class = "lblue">HTTP Request</span> message to the server asking it to send a copy of the website to the client.</li>
+                    <li>If the server approves the client's request, the server sends the client a<span class = "lblue">"200 OK" message</span>, which means "permission greanted!
+                     Here you go!" , and then starts sending the website's files to the browser as a series of small chunks.</li>
+                    <li>The browser assembles the small chunkc into a complete website and displays it to you!</li>
+                </ol>
+            </div>
         </div>
         <div class = "Bottom_ad">
             <img src = "./images/html.png">
-            <h2>The Big 3 - HTML, CSS, JavaScript</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam urna nulla, suscipit.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam urna nulla, suscipit.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam urna nulla, suscipit.
-            </p>
-            <h5>Learn more about the BIG 3 <a href = "">here</a>!</h5>
+            <div id = "right">
+                <h2>The Big 3 - HTML, CSS, JavaScript</h2>
+                <p>
+                    While te server can process information in many different languages, the files that they serve to the client are <i>always</i> going to be some combination 
+                    of HTML, CSS, and JavaScript!
+                </p>
+                <h5>Learn more about the BIG 3 <span class = "lblue">here</span>!</h5>
+            </div>
         </div>
         </div>
     </div>

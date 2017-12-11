@@ -4,7 +4,6 @@ body *{
     font-family: Arial;
     background:none;
     border:0px;
-    list-style: none;
     text-decoration: none;
 }
 .wrapper{
@@ -12,13 +11,15 @@ body *{
     margin:auto;
     background-color: white;
 }
+.red{
+    color: red;
+}
+.blue{
+    color:blue;
+}
 .header{
     display: inline-block;
-    background-color: red;
     width: 960px;
-}
-.header a{
-    color:lightblue;
 }
 .header img{
     display: inline-block;
@@ -37,16 +38,171 @@ body *{
 .sidebar{
     text-align: left;
     width: 275px;
+    height: 600px;
     display: inline-block;
-    background-color:purple;
+}
+.sidebar p{
+    margin: auto;
+    margin-top:10px;
+    text-align: left;
+}
+.sidebar h2{
+    margin-top: 26px;
+}
+.Watch_Video{
+    background-color:orange;
+    display:block;
+    margin: auto;
+    margin-top: 27px;
+    width:180px;
+    height:37px;
+    color: white;
+    border-radius: 10px;
+}
+.more_resources{
+    background-color: blue;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    width: 180px;
+    height: 37px;
+    color: white;
+    border-radius: 10px;
+}
+.line{
+    width: 250px;
+    height: 2px;
+    background-color: grey;
+    margin: 20px 6px;
 }
 .dojoad{
-    display: block;
+    background-image: url('./images/ad_background.png');
+    height: 300px;
+    padding: 20px;
+    
+}
+.dojoad h1{
+    display: inline;
+    text-align: center;
+    color: white;
+    margin: 27px;
+}
+.dojoad img{
+    margin: 10px 42px;
+
+}
+.dojoad button{
+    display: inline-block;
+    background-color: yellow;
+    text-align: center;
+    margin: 0px 58px;
+    padding: 5px;
+    border-radius: 10px;
 }
 .main_content{
     display: inline-block;
     text-align: right;
     vertical-align: top;
-    background-color:pink;
-    width:670px;
+    width:681px;
+}
+.main_content img{
+    width:51px;
+    height: 49px;
+    vertical-align: bottom;
+    display: inline-block;
+    text-align: left;
+}
+.main_content h4{
+    vertical-align: bottom;
+    display: inline-block;
+    text-align: left;
+}
+#horiz_line{
+    width: 669px;
+    height: 2px;
+    background-color: gray;
+    margin: auto;
+    margin-top: -8px;
+}
+.left{
+    width: 95px;
+    height: 49px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 10px;
+}
+.left h4{
+    color:blue;
+}
+.right{
+    width:237px;
+    height:93px;
+    display: inline-block;
+    margin-left: 333px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.right h5{
+    font-size: 10px;
+}
+.right h2{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size:28px;
+    color:blue;
+}
+.right img{
+    display: inline-block;
+    margin-right: 5px;
+}
+.middle h2{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.middle p{
+    text-align: left;
+    margin-bottom:10px;
+}
+.middle li{
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.middle img{
+    width: 316px;
+    height: 100px;
+    margin-right:149px;
+}
+.middle ol{
+    display: inline-block;
+    text-align: left;
+}
+.middle ul{
+    display: inline-block;
+    text-align: left;
+}
+.bottom_ad{
+    width: 655px;
+    border: 8px solid blue;
+    display: inline-block;
+    margin-left: 280px;
+}
+.bottom_ad img{
+    width: 120px;
+    height: 101px;
+    display: inline-block;
+}
+.bottom_ad h2{
+    display: inline-block;
+    vertical-align: top;
+}
+.bottom_ad p{
+    vertical-align: top;
+}
+#right{
+    display: inline-block;
+    width: 530px;
+}
+.lblue{
+    color: lightblue;
 }
