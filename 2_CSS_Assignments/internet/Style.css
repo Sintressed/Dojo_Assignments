@@ -23,7 +23,6 @@ body *{
 }
 .header img{
     display: inline-block;
-    padding: none;
 }
 .header h2{
     display: inline-block;
@@ -93,10 +92,11 @@ body *{
 }
 .dojoad button{
     display: inline-block;
-    background-color: yellow;
+    background-color: blue;
+    color:white;
     text-align: center;
-    margin: 0px 58px;
-    padding: 5px;
+    margin: 0px 54px;
+    padding: 10px;
     border-radius: 10px;
 }
 .main_content{
@@ -165,7 +165,6 @@ body *{
 }
 .middle li{
     display: inline-block;
-    text-align: left;
     margin-bottom: 5px;
 }
 .middle img{

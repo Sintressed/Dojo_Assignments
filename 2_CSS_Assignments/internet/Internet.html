@@ -1,4 +1,4 @@
-<!doctype=html>
+<!DOCTPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -7,7 +7,7 @@
     <body>
         <div class = "wrapper">
             <div class = "Header">
-                <img src = "./images/globe.png" Alt = "globe.png" width="100px" Height= "100px">
+                <img src = "./images/globe.png" Alt = "globe.png" width="100" Height= "100">
                 <h2>The Inter<span class = "blue">net</span></h2>
                 <h3>The World Wide Web</h3>
             </div>
@@ -19,55 +19,54 @@
                 <div class='line'></div>
                 <div class = "DojoAd">
                         <h1>Reinvent your career in just 14 weeks</h1>
-                        <img src = "./images/ninja.png" alt = "Ninja.png" width="136px" height= "138px">
+                        <img src = "./images/ninja.png" alt = "Ninja.png" width="136" height= "138">
                         <button>Learn More >>></button> 
                 </div>
             </div>
-        <div class = "Main_Content">
-            <div class = "left">
-                <img src = "./images/home.png" alt = "home.png">
-                <h4>DNS</h4>
+            <div class = "Main_Content">
+                <div class = "left">
+                    <img src = "./images/home.png" alt = "home.png" width=38 length=10>
+                    <h4>DNS</h4>
+                </div>
+                <div class = "right">
+                    <h5>Mon-Fri 9 a.m. - 5 p.m. (EST)</h5>
+                    <img src = "./images/phone.png" alt= "phone.img" width=38 length=10>
+                    <h2>855.967.3787</h2>
+                    <h5>international +1 .617.963.0555</h5>
+                </div>
+                <div id = "Horiz_line"></div>
+                <div class = "middle">
+                    <h2>Clients And Servers</h2>
+                    <p>Computers connected to the <span class = "lblue">Web</span> are called <b>clients</b> and <b>servers</b>.</p>
+                    <ul>
+                        <li><span class = "lblue">Clients</span> are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected
+                        to your mobile network)and <span class = "lblue">Web-accessing software</span>available on those devices (usually a web browser like Firefox or Chrome).</li> 
+                        <li><span class = "lblue">servers</span> are computers that store <span class = "lblue">webpages</span>,<span class = "lblue">sites</span>, or apps
+                        <span class = "lblue">apps</span>. When a client device wants to access a webpage, a copy of the webpage is downloaded
+                        from the server onto the client machine to be displayed in the user's web browser.</li>
+                    </ul>
+                    <img src = "./images/client_server.jpg" alt = "server.jpg">
+                    <h2>So What Actually Happens?</h2>
+                    <ol>
+                        <li>The browser goes to the<span class = "lblue">DNS Server</span> consectetur adipiscing elit<span class = "lblue">server</span> that the website lives on.</li>
+                        <li>The browser sends an<span class = "lblue">HTTP Request</span> message to the server asking it to send a copy of the website to the client.</li>
+                        <li>If the server approves the client's request, the server sends the client a<span class = "lblue">"200 OK" message</span>, which means "permission greanted!
+                        Here you go!" , and then starts sending the website's files to the browser as a series of small chunks.</li>
+                        <li>The browser assembles the small chunkc into a complete website and displays it to you!</li>
+                    </ol>
+                </div>
             </div>
-            <div class = "right">
-                <h5>Mon-Fri 9 a.m. - 5 p.m. (EST)</h5>
-                <img src = "./images/phone.png" alt= "phone.img">
-                <h2>855.967.3787</h2>
-                <h5>international +1 .617.963.0555</h5>
-            </div>
-            <div id = "Horiz_line"></div>
-            <div class = "middle">
-                <h2>Clients And Servers</h2>
-                <p>Computers connected to the <span class = "lblue">Web</span> are called <b>clients</b> and <b>servers</b>.</p>
-                <ul>
-                    <li><span class = "lblue">Clients</span> are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected
-                    to your mobile network)and <span class = "lblue">Web-accessing software</span></li> available on those devices (usually a web browser like Firefox or Chrome).
-                    <li><span class = "lblue">servers</span> are computers that store <span class = "lblue">webpages</span>,<span class = "lblue">sites</span>, or apps
-                    <span class = "lblue">apps</span>. When a client device wants to access a webpage, a copy of the webpage is downloaded
-                    from the server onto the client machine to be displayed in the user's web browser.</li>
-                </ul>
-                <img src = "./images/client_server.jpg">
-                <h2>So What Actually Happens?</h2>
-                <ol>
-                    <li>The browser goes to the<span class = "lblue">DNS Server</span> consectetur adipiscing elit<span class = "lblue">server</span> that the website lives on.</li>
-                    <li>The browser sends an<span class = "lblue">HTTP Request</span> message to the server asking it to send a copy of the website to the client.</li>
-                    <li>If the server approves the client's request, the server sends the client a<span class = "lblue">"200 OK" message</span>, which means "permission greanted!
-                     Here you go!" , and then starts sending the website's files to the browser as a series of small chunks.</li>
-                    <li>The browser assembles the small chunkc into a complete website and displays it to you!</li>
-                </ol>
+            <div class = "Bottom_ad">
+                <img src = "./images/html.png" alt = "html.png">
+                <div id = "right">
+                    <h2>The Big 3 - HTML, CSS, JavaScript</h2>
+                    <p>
+                        While te server can process information in many different languages, the files that they serve to the client are <i>always</i> going to be some combination 
+                        of HTML, CSS, and JavaScript!
+                    </p>
+                    <h5>Learn more about the BIG 3 <span class = "lblue">here</span>!</h5>
+                </div>
             </div>
         </div>
-        <div class = "Bottom_ad">
-            <img src = "./images/html.png">
-            <div id = "right">
-                <h2>The Big 3 - HTML, CSS, JavaScript</h2>
-                <p>
-                    While te server can process information in many different languages, the files that they serve to the client are <i>always</i> going to be some combination 
-                    of HTML, CSS, and JavaScript!
-                </p>
-                <h5>Learn more about the BIG 3 <span class = "lblue">here</span>!</h5>
-            </div>
-        </div>
-        </div>
-    </div>
     </body>
 </html>
