@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dissapearing Ninja!</title>
+        <script type = "text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){               
+                $('img').click(function(){
+                    $('#' + this.id).css("visibility", "hidden")
+                })
+                $('button').click(function(){
+                    $('img').css("visibility", "visible")
+                })
+            })
+        </script>
+    </head>
+    <body>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '0'>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '1'>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '2'>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '3'>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '4'>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '5'>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '6'>
+<img src = "./D_N img/frog.jpg" alt = "frog.jpg" width = '100' height = '100' id = '7'>
+<br>
+<button>Restore images</button>
+    </body>
+</html>
