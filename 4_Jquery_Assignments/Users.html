@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type = "text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type = "text/javascript">
+        $(document).ready(function(){
+            $('button').click(function(){
+                //var input = $('input').val()
+               // alert(input)
+                //$('td').append(input)
+                for(var i = 0;i<4;i++)
+                {
+                    //console.log($('input' + '.' + i).val())
+                
+                    $('td' + '.' + i).append($('input' + '.' + i).val())
+                }
+                
+            })
+        })
+        </script>
+    </head>
+    <body>
+        <table border = '1'>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact No.</th>                
+            </tr>
+            <tr>
+                <td class = '0'></td>
+                <td class = '1'></td>
+                <td class = '2'></td>
+                <td class = '3'></td>                
+            </tr>
+        </table>
+        <h1>Add User</h1>
+        <label>First Name</label>
+        <input type="text" value="First Name" name = "First" class = '0'>
+        <br>
+        <label>Last Name</label>
+        <input type="text" value="Last Name" name = "Last" class = '1'>
+        <br>        
+        <label>Email Address</label>
+        <input type="text" value="Email Address" name = "email" class = '2'>
+        <br>
+        <label>Contact No</label>
+        <input type="text" value="Contact No" name = "Contact" class = '3'>
+        <br>
+        <button>Add User</button>
+        
+        
+    </body>
+</html>
