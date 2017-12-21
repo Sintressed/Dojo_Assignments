@@ -9,12 +9,16 @@
 
             //for(d = 0; d < 2 ; d ++){
             $(document).on("click", "button",/*d = d +1,*/function(){
-                console.log()
+                //console.log()
                 for(var i = 0; i < 3; i++)
                 {    
-                    $('.left').children().append('<div class = box ' /*id = # + d*/ +'><h3></h3></div>');
-                    $('.box'/* + '#' +d*/).children().append($( '#' + i).val() +'<br>');
+                    var val = $( '#' + i).val();
+                    $('.left').children().append('<div class = box> ' /*id = # + d*/ +val +'</div><br>');
+                    //$('.left').children().append('<div class = box ' /*id = # + d*/ +'><h3></h3></div>');
+                   // $('.box'/* + '#' +d*/).children().append($( '#' + i).val() +'<br>');
+                  
                 }
+                
             })
             //}
         });
@@ -26,17 +30,19 @@
                 height: 400px;
                 margin: 10px;
                 border: 1px solid black;
+                overflow:hidden;
             }
         </style>
     </head>
     <body>
+        
         <div class = 'right'>
             <label type = 'text'>First Name:</label>
-            <input type="text" name = 'first_name' value = ''id = '0'><br>
+            <input type="text" name = 'first_name' value = 'Heidi' id = '0'><br>
             <label type = "text">Last Name:</label>
-            <input type = 'text' name = 'last name' value = '' id = '1'><br>
+            <input type = 'text' name = 'last name' value = 'Reid' id = '1'><br>
             Description:<br>
-            <textarea type = 'text' name = 'description' value = ''id = '2'></textarea>
+            <textarea type = 'text' name = 'description' value = '' id = '2'></textarea>
             <button>Add User</button>
         </div>
         <div class = 'left'>
