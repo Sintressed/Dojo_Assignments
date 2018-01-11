@@ -1,4 +1,4 @@
-x = input()
+x = input('Enter an integer, string, or list! >')
 print(type(x))
 def yes():
     if x >= 100:
@@ -23,4 +23,5 @@ elif type(x) == str:
     no()
 elif type(x) == list:
     maybe() 
-
+else:
+    print 'That is not an integer(number), list(array), or string(''word'')' 
