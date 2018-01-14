@@ -11,7 +11,9 @@ def multiply():
     for num in range(0,len(a)):
         b.append(5 * a[num]) 
         continue
-    print b
-        
+    print b 
+def hacker()
+    
 #odd_even()
-multiply()
+#multiply()
+hacker()
