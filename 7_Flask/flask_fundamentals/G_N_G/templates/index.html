@@ -7,10 +7,8 @@
         <h3>Take a guess!</h3><br>
         <form method="POST" action = '/users'>
             <input type="text" name = 'guess'>
-            <input type = 'submit' value = 'normal'>
+            <input type = 'submit' value = '{{session['x']}}'>
             </form>
-            {{session['root']}}
-            {{session['voice']}}
         <br>
     </body>
 </html>
