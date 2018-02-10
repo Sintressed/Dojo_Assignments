@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Email Verification With Database</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+            <h2>Enter your email</h2>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{message}}<br>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+            <form action='/process', method='post'>
+                    <label class="label_item">Email Address:</label>
+                    <input class="input_item" type='text' name='email_address'>
+                <input type='submit' name="formAction" value='Add Email' class="button">
+                <input type='submit' name="formAction" value='Delete Email' class="button">
+            </form>
+            <br>
+            <form action='/success', method='get'>
+                <input type='submit' value='View Current Users' class="button">
+            </form>
+    </body>
+</html>
