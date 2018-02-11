@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>View Users</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+            <h1>Current table of users</h1>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            {{message}}<br>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Registered Date</th>
+                    </tr>
+                    {% for user in users: %}
+                        <tr>
+                            <td>{{ user['first_name'] + " " +user['last_name'] }}</td>
+                            <td>{{ user['email_address'] }}</td>
+                            <td>{{ user['username'] }}</td>
+                            <td>{{ user['password'] }}</td>
+                            <td>{{ user['created_at'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <br><br>
+            <form action='/home', method='get'>
+                <input type='submit' value='Home' class="button">
+            </form>
+    </body>
+</html>
