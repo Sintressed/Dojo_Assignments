@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>The Wall</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+                <table>
+                    <tr>
+                        <th>Coding Dojo Wall</th>
+                        <th>              
+                            <form  action='/logoff', method='get'>
+                                <label>Welcome {{ session['username'] }}!</label><input class="button-1" type='submit' value='Log Off' class="button">
+                            </form>
+                        </th>
+                    </tr>
+                </table>
+                <h3>Post a message</h3>
+                <form action="/submit" method='post'>
+                    <textarea name="message" rows="5" placeholder=""></textarea>
+                    <input type="hidden" name="submit-type" value="message">
+                    <input class="button-1" type='submit' value='Submit' class="button">
+                </form>   
+                {% for message in wall_messages: %}
+                            <button type="button" class="content-toggle button-1" value="Hide">Hide</button>
+                            <span class="tooltiptext">Click to hide or show comments</span>
+                        <h3>{{message['poster']}} {{message['post_date']}}</h3>
+                            <p>{{message['message']}}</p>
+                        
+                            {% for comment in wall_comments: %}
+                                {% if comment['message_id'] == message['message_id'] %}
+                                    <h3>{{comment['commenter']}} {{comment['post_date']}}</h3>
+                                    <p>{{comment['comment']}}</p>
+                                {% endif %}
+                            {% endfor %}
+                                <h3>Post a comment</h3>
+                                <form action="/submit" method='post'>
+                                    <textarea name="comment" rows="5" placeholder=""></textarea>
+                                    <input type="hidden" name="submit-type" value="comment">
+                                    <input type="hidden" name="message-id" value="{{ message['message_id'] }}">
+                                    <input class="button-1" type='submit' value='Submit' class="button">
+                                </form>
+                {% endfor %}
+    </body>
+</html>
