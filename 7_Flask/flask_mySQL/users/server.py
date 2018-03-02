@@ -27,17 +27,29 @@ def edit_id(id):
     id = int(id) - 1
     users_list = mysql.query_db("select *,DATE_FORMAT(info.created_at, '%b %D,%Y') AS Date from info" )
     return render_template('edit.html', id = id,users=users_list)
-#@app.route('/users/<id>/destroy')
+@app.route('/users/<id>/destroy')
 #post routes
-#def destroy():
-    #return render_template('edit.html')
-@app.route('/users/create')
+def destroy(id):
+    id = int(id) - 1
+    query = "DELETE FROM info WHERE id=:id"
+    data = {
+        "id": id
+    }
+    return render_template('edit.html')
+@app.route('/users/create', methods = ['post'])
 #from '/users/new'
 def create():
-    return redirect('''user['id']''')
+    query = "INSERT INTO info (first_name, last_name, email_address, created_at) VALUES (:first,:last, NOW())"
+    data = {
+        "first":request.form['first_name'],
+        "last":request.form['last_name'],
+        "email":request.form['email_address']
+    }
+    return redirect('/users')
 @app.route('/users/<id>', methods = ['POST'])
 #from  '/users/<id>/edit'
 def post_id(id):
+    print 'yes'
     query = "UPDATE info SET first_name = :first, last_name = :last, email_address = :email, created_at = NOW() WHERE id = :id"
     data = {
         "first": request.form['first_name'],
@@ -45,8 +57,6 @@ def post_id(id):
         "email": request.form['email_address'],
         "id": id
     }
-    print mysql.query_db(query, data)
     mysql.query_db(query, data)
-    print 'yes'
-    return redirect('/users/<id>', id = id)
+    return redirect('/users/' + str(id))
 app.run(debug=True)
