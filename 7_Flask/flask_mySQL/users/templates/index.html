@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Users</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>    
+        <h1>Users</h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+            {% for user in users: %}
+            <tr>
+                <td>{{user['id']}}</td>
+                <td>{{user['first_name']}} {{user['last_name']}}</td>
+                <td>{{user['email_address']}}</td>
+                <td>{{user["DATE_FORMAT(info.created_at, '%b %D,%Y')"]}}</td>
+                <td><a href = '/users/{{user['id']}}' name = 'show' value = '{{user['id']}}'>show </a><a href = '/users/{{user['id']}}/edit' name = 'edit'>Edit</a></td>
+            </tr>
+            {%endfor%}
+        </table>
+        <a href = '/users/new' method = 'get'>Create new user</a>
+    </body>
+</html>

@@ -28,7 +28,7 @@
                             <td>{{ user['email_address'] }}</td>
                             <td>{{ user['username'] }}</td>
                             <td>{{ user['password'] }}</td>
-                            <td>{{ user['created_at'] }}</td>
+                            <td>{{ user['created_at']["DATE_FORMAT(created_at, '%b %D,%Y')"]}}</td>
                         </tr>
                     {% endfor %}
                 </table>

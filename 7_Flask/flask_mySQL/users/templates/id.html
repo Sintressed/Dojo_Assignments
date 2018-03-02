@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Create New User</title>
+        <meta charset="UTF-8">
+    </head>
+    <body> 
+        <h1> User {{id + 1}}</h1>
+        <table>      
+                <tr><td>Full name: {{users[id]['first_name']}} {{users[id]['last_name']}}</td></tr>
+                <tr><td>Email: {{users[id]['email_address']}}</td></tr>
+                <tr><td>Created At: {{users[id]['Date']}}</td></tr>
+        </table> 
+        <a href = '/users/{{users[id]['id']}}/edit'>Edit</a> | 
+    </body>
+</html>

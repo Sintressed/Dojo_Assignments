@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create New User</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Add A New User</h1>
+        <form action = '/users/create' methods = 'post'>
+            <label>First Name</label><input type = 'text' name = 'first_name'>
+            <label>Last name</label><input type = 'text' name = 'last_name'>
+            <label>Email Address</label><input type = 'text' name = 'email_address'>
+            <input type = 'submit' value = 'create'>
+            <a href = '/users'>Go Back</a>
+        </form>
+    </body>
+</html>
