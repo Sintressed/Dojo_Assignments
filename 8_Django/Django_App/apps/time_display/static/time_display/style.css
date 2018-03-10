@@ -1,0 +1,23 @@
+
+.background{
+    text-align: center;
+    width: 950px;
+    margin: auto;
+    padding: 250px;
+}
+.top{
+    width: 250px;
+    height: 62px;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: top;
+    margin:10px 250px 10px 250px ;
+}
+.bottom{
+    width: 445px;
+    height:169px;
+    border: 2px solid black;
+    vertical-align: bottom;
+    text-align:center;
+    margin:0px 165px 0px 165px ;
+}
