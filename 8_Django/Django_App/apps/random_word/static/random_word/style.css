@@ -1,0 +1,21 @@
+.body{
+    margin:auto;
+    width: 950px;
+}
+.word{
+    margin:auto;
+    text-align: center;
+    border: 2px solid black;
+    height: 37px;
+    width: 250px;
+    padding: 24px 10px 10px 10px;
+}
+h4{
+    margin: auto;
+    text-align: center;
+}
+form{
+
+    margin: 10px 250px;
+    text-align: center;
+}

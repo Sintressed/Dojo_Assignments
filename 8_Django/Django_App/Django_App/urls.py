@@ -16,5 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include # Notice we added include
 from django.contrib import admin
 urlpatterns = [
-    url(r'^', include('apps.blogs_app.urls')) # And now we use the include function to pull in our blogs_app.urls...
+    url(r'^',include('apps.random_word.urls'))
+    #url(r'^',include('apps.time_display.urls'))
+    #url(r'^', include('apps.time_display.urls')) # And now we use the include function to pull in our blogs_app.urls...
 ]
