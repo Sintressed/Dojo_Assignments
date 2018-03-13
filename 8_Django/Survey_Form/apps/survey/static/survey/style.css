@@ -1,0 +1,23 @@
+.body{
+    margin: auto;
+    width: 500px;
+    height: 260px;
+    border: 2px solid;
+    padding: 30px;
+}
+table{
+    font-size: 20px;
+}
+td{
+    width: 268px;
+}
+textarea{
+    width: 427px;
+    height: 100px;
+}
+#green{
+    padding:10px;
+    border: 2px solid green;
+    background-color: lightseagreen;
+    height: 25px;
+}

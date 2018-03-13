@@ -1,0 +1,44 @@
+<!doctype = html>
+<html>
+    <head>
+        <title>
+            form
+        </title>
+        {% load staticfiles %}
+        <link rel = 'stylesheet' type = 'text/css' href= "{% static 'survey/style.css' %}">
+    </head>
+    <body>
+        <div class = 'body'>
+            <form action='/process/' method='POST'>
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type = 'text' name = 'name'></td>                            
+                    </tr>
+                    <tr>
+                        <td>Location:</td>
+                        <td><select name = 'loc'>
+                                <option value = '1'>1</option>
+                                <option value = '2'>2</option>
+                                <option value = '3'>3</option>
+                                <option value = '4'>4</option>
+                            </select></td>                            
+                    </tr>
+                    <tr>
+                        <td>Favorite Language:</td>
+                        <td><select name = 'language'>
+                                <option value = 'a'>a</option>
+                                <option value = 'b'>b</option>
+                                <option value = 'c'>c</option>
+                                <option value = 'd'>d</option>
+                            </select></td>                            
+                    </tr>
+                </table> 
+                comments(optional):
+                <textarea name = 'tet'></textarea>
+                <input type = 'submit'>
+            </form>
+        </div>
+    </body>
+</html>
