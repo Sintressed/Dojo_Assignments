@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="{% static 'session_words/style.css' %}">
     </head>
     <body>
-        <div class = 'body'>
+        <div id = 'body'>
             <div class = 'left'>
                 <form action = '/add/' method = 'POST'>
                     {% csrf_token %}
@@ -18,17 +18,16 @@
                     <input type = 'radio' name = 'color' value = 'green'>Green
                     <input type = 'radio' name = 'color' value = 'blue'>Blue<br>           
                     <input type = 'checkbox' name = 'font'>Show Big Fonts!<br>
-                    <input type="submit" value = 'Add To Session'>
+                    <input type="submit" value = 'Add To Session' id = 'add'>
                 </form>
             </div>
-            <div id = 'middle'></div>
-            <div class = 'right'>
+            <div class= 'right'>
                 {% for item in request.session.wlist %}
-                    {{item}}
+                <div id = "{{item.1}}"><{{item.2}}>{{item.0}}</{{item.2}}><h4>- {{item.3}}</h4><br></div> 
                 {% endfor %}
-                <form action = '/delete/' methods = 'POST'>
+                <form action = '/delete/' method = 'POST'>
                     {% csrf_token %}
-                    <input type="submit" value = 'Clear'>
+                    <input type="submit" value = 'Clear' id = 'clear'>
                 </form>
             </div>
         </div>

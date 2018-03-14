@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+}
+#body{
+    width: 950px;
+    margin: auto;
+}
+.left{
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;
+    border-right: 2px solid black;
+    width: 300px;
+    height: 400px;
+    margin-left: 200px;
+}
+.right{
+    vertical-align: top;
+    display: inline-block;
+    width: 400px;
+       
+}
+#green{
+    color: green;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+#red{
+    text-align: left;
+    display: inline-block;
+    color:red;
+    vertical-align: top;
+}
+#blue{
+    text-align: left;
+    display: inline-block;
+    color: blue;
+    vertical-align: top;
+}
+h4{
+    color: black;
+    text-align: right;
+    vertical-align: top;
+    display: inline-block;
+}
+#add{
+    width: 200px;
+    background-color: blue;
+    color: white;
+}
+#clear{
+    width: 200px;
+    background-color: red;
+    color: white;
+    box-shadow: black;
+}
