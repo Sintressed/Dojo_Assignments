@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Index
+        </title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'session_words/style.css' %}">
+    </head>
+    <body>
+        <div class = 'body'>
+            <div class = 'left'>
+                <form action = '/add/' method = 'POST'>
+                    {% csrf_token %}
+                    <h1>Add A New Word</h1>
+                    <input type = 'text' name = 'word'>
+                    <h3>choose color</h3>
+                    <input type = 'radio' name = 'color' value = 'red'>Red
+                    <input type = 'radio' name = 'color' value = 'green'>Green
+                    <input type = 'radio' name = 'color' value = 'blue'>Blue<br>           
+                    <input type = 'checkbox' name = 'font'>Show Big Fonts!<br>
+                    <input type="submit" value = 'Add To Session'>
+                </form>
+            </div>
+            <div id = 'middle'></div>
+            <div class = 'right'>
+                {% for item in request.session.w_list %}
+                    {{item}}
+                {% endfor %}
+                <form action = '/delete/' methods = 'POST'>
+                    {% csrf_token %}
+                    <input type="submit" value = 'Clear'>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
