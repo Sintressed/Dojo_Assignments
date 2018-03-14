@@ -14,9 +14,11 @@ def add(request):
             font = 'yes'
         else:
             font = 'no'
-        #if not request.POST['color'] == 'green'or 'red' or 'blue':
-            #return redirect('/')
-        request.session['w_list'].append({request.POST['word'],request.POST['color'],font})
+        if not "wlist" in request.session:
+            request.session['wlist'] = []
+            request.session['wlist'].append({request.POST['word'],request.POST['color'],font})
+        else:
+            request.session['wlist'].append({request.POST['word'],request.POST['color'],font})
         #print request.session['list']
         return redirect('/')
     else:

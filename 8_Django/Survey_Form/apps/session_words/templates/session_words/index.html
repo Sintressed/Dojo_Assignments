@@ -23,7 +23,7 @@
             </div>
             <div id = 'middle'></div>
             <div class = 'right'>
-                {% for item in request.session.w_list %}
+                {% for item in request.session.wlist %}
                     {{item}}
                 {% endfor %}
                 <form action = '/delete/' methods = 'POST'>
