@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.Amadon',
     'apps.survey',
     'apps.session_words',
     'django.contrib.admin',

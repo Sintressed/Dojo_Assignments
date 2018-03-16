@@ -17,5 +17,7 @@ from django.conf.urls import url,include
 
 urlpatterns = [
     #url(r'^',include('apps.survey.urls'))
-    url(r'^',include('apps.session_words.urls'))
+    #url(r'^',include('apps.session_words.urls'))
+    url(r'^',include('apps.Amadon.urls'))
+
 ]

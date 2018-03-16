@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <div id = 'body'>
+            <h1>Amadon Store!</h1>
+            <div id = 'table'>
+                <table>
+                    <form action = '/process/' method = 'POST'>
+                        {% csrf_token %}
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                        {% for item in request.session.item_list %}
+                        <tr>
+                            <td>{{item.1}}</td>
+                            <td>{{item.2}}
+                                <input type = 'hidden' name = 'product_id' value = '{{item.0}}'}}>
+                            </td>
+                            <td><select name = 'actions'>
+                                <option value = '1'>1</option>
+                                <option value = '2'>2</option>
+                                <option value = '3'>3</option>
+                                </select>
+                                <input type = 'submit' value = 'buy'>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </form>
+                </table>
+            </div>
+    </body>
+</html>
