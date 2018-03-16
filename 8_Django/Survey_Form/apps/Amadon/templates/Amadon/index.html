@@ -1,14 +1,14 @@
 <html>
     <head>
         <title>Index</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'Amadon/style.css' %}">
     </head>
     <body>
-        <div id = 'body'>
+        <div class = 'body'>
             <h1>Amadon Store!</h1>
             <div id = 'table'>
                 <table>
-                    <form action = '/process/' method = 'POST'>
-                        {% csrf_token %}
                         <tr>
                             <th>Item</th>
                             <th>Price</th>
@@ -16,6 +16,8 @@
                         </tr>
                         {% for item in request.session.item_list %}
                         <tr>
+                            <form action = '/process/' method = 'POST'>
+                            {% csrf_token %}
                             <td>{{item.1}}</td>
                             <td>{{item.2}}
                                 <input type = 'hidden' name = 'product_id' value = '{{item.0}}'}}>
@@ -27,10 +29,11 @@
                                 </select>
                                 <input type = 'submit' value = 'buy'>
                             </td>
+                            </form>
                         </tr>
                         {% endfor %}
-                    </form>
                 </table>
+                </div>
             </div>
     </body>
 </html>

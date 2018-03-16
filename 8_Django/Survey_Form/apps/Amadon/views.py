@@ -10,8 +10,19 @@ def checkout(request):
     return render(request,'Amadon/checkout.html')
 def process(request):
     if request.method == 'POST':
-        print request.POST['product_id']
-        #request.session['price'] = request.POST['']
+        for item in request.session['item_list']:
+            if item[0] == request.POST['product_id']:
+                request.session['price'] = float(item[2]) * float(request.POST['actions'])
+                if not "items" in request.session:
+                    request.session['items'] = 0
+                    request.session['items'] += 1
+                else:
+                    request.session['items'] = request.session['items'] + 1
+                if not "total" in request.session:
+                    request.session['total'] = 0
+                    request.session['total'] = request.session['total'] + float(item[2])
+                else: 
+                    request.session['total'] = request.session['total'] + float(item[2])
         return redirect('/checkout')
     else:
         return redirect('/checkout')
