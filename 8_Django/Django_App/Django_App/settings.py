@@ -31,19 +31,21 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #'apps.surveys',
-    #'apps.users',
-    'apps.blogs',
+    'apps.surveys',
+    'apps.users',
+    'apps.user_login',
+    'apps.blogs_app',
     'apps.time_display',
     'apps.random_word',
     'django.contrib.admin',
+    #'django.contrib.user_login',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
+SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

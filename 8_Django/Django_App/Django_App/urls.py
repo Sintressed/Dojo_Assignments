@@ -16,8 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 urlpatterns = [
     #url(r'^',include(('apps.blogs_app.urls'))),
-    url(r'surveys/^',include('apps.surveys.urls')),
-    url(r'users/',include('apps.users.urls')),
+    #url(r'surveys/^',include('apps.surveys.urls')),
+    #url(r'users/',include('apps.users.urls')),
     #url(r'^',include('apps.time_display.urls'))
     #url(r'^', include('apps.time_display.urls')) # And now we use the include function to pull in our blogs_app.urls...
 ]
