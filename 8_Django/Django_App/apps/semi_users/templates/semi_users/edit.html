@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Create New User</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>        
+        <h1> Edit User </h1>
+        <form action = '{% url "update" %}' method = 'post'>
+            {% csrf_token %}
+            <label>First Name</label><input type = 'text' name = 'first_name' value = {{id.first_name}}>
+            <label>Last Name</label><input type = 'text' name = 'last_name' value = {{id.last_name}}>
+            <label>Email</label><input type = 'text' name = 'email_address' value = {{id.email_address}}>
+            <input type = 'submit' value = 'update'>
+            <a href = '{% url "index" %}'>Go Back</a>
+        </form>
+    </body>
+</html>

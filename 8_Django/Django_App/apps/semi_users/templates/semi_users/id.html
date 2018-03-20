@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Create New User</title>
+        <meta charset="UTF-8">
+    </head>
+    <body> 
+        <h1> User {{userid}}</h1>
+        <table>      
+                <tr><td>Full name: {{id.first_name}} {{id.last_name}}</td></tr>
+                <tr><td>Email: {{id.email_address}}</td></tr>
+                <tr><td>Created At: {{id.created_at}}</td></tr>
+        </table> 
+        <a href = '{% url edit userid={userid} %}'>Edit</a> | <a href = 'users/{{userid}}/destroy/'>delete</a>
+    </body>
+</html>

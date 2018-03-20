@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 urlpatterns = [
+    url(r'^users/',include('apps.semi_users.urls'))
     #url(r'^',include(('apps.blogs_app.urls'))),
     #url(r'surveys/^',include('apps.surveys.urls')),
     #url(r'users/',include('apps.users.urls')),
