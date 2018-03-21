@@ -10,8 +10,9 @@
         <table>      
                 <tr><td>Full name: {{id.first_name}} {{id.last_name}}</td></tr>
                 <tr><td>Email: {{id.email_address}}</td></tr>
-                <tr><td>Created At: {{id.created_at}}</td></tr>
+                <tr><td>Created At: {{id.created_at|date:"M d,Y"}}</td></tr>
         </table> 
-        <a href = '{% url edit userid={userid} %}'>Edit</a> | <a href = 'users/{{userid}}/destroy/'>delete</a>
+        <br>
+        <a href = '{% url "edit" userid %}'>Edit</a> | <a href = '{% url "destroy" userid %}'>delete</a>
     </body>
 </html>

@@ -5,15 +5,23 @@
         <title>Create New User</title>
         <meta charset="UTF-8">
     </head>
-    <body>        
+    <body>
+            <ul>
+            {% if messages %}
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         <h1> Edit User </h1>
         <form action = '{% url "update" %}' method = 'post'>
             {% csrf_token %}
-            <label>First Name</label><input type = 'text' name = 'first_name' value = {{id.first_name}}>
-            <label>Last Name</label><input type = 'text' name = 'last_name' value = {{id.last_name}}>
-            <label>Email</label><input type = 'text' name = 'email_address' value = {{id.email_address}}>
-            <input type = 'submit' value = 'update'>
-            <a href = '{% url "index" %}'>Go Back</a>
+            <label>First Name<br></label><input type = 'text' name = 'first_name' value = {{id.first_name}}><br><br
+            <label>Last Name<br></label><input type = 'text' name = 'last_name' value = {{id.last_name}}><br><br>
+            <label>Email<br></label><input type = 'text' name = 'email_address' value = {{id.email_address}}><br><br><br>
+            <input type="hidden" name = 'id' value = {{userid}}>
+            <input type = 'submit' value = 'update'><br><br>
+            <a href = "{% url 'identify' id.id %}">Show</a> | <a href = '{% url "index" %}'>Go Back</a>
         </form>
     </body>
 </html>
