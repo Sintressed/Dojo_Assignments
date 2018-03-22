@@ -23,13 +23,8 @@ def login_process(request):
                 messages.error(request, error, extra_tags=tag)
             return redirect(reverse('index'))
         else:
-            x = LoginRegistration.objects.filter(password = request.POST['login_password'])
-            y = request.POST['login_password']
-            hashed = bcrypt.hashpw(x.encode(), bcrypt.gensalt())
-            isPassword = bcrypt.checkpw(hashed.encode(), x.encode())
-            if isPassword:
-                request.session['name'] = LoginRegistration.objects.get(email_address = request.POST['login_email_address']).first_name
-                return redirect(reverse("success"))
+            request.session['name'] = LoginRegistration.objects.get(email_address = request.POST['login_email_address']).first_name
+            return redirect(reverse("success"))
     else:
         return redirect(reverse("index"))
 def register_process(request):

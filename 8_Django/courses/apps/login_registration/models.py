@@ -41,11 +41,15 @@ class LRManager(models.Manager):
                     errors["password"] = "Password has to be more than 8 characters long"
             if postData['confirm_password'] != postData['password']:
                 errors['confirm'] = "Passwords don't match"
+            return errors
     def login_validator(self, postData):
-        errors = {}
-        if not self.filter(email_address = postData['login_email_address']):
-            errors['login_email'] = "email is not in database"
-            #re hash the password and validate it#
+        errors = {} 
+        if self.filter(email_address = postData['login_email_address']):
+            x = LoginRegistration.objects.get(email_address = postData['login_email_address'])
+            if bcrypt.checkpw(postData['login_password'].encode(), x.password.encode()) != True:
+                errors['invalid_password'] = "Invalid Password!"
+        else:
+            errors['unregistered'] = "Email invalid or not in database!"
         return errors
 class LoginRegistration(models.Model):
     first_name = models.CharField(max_length = 255)
