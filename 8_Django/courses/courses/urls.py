@@ -17,5 +17,7 @@ from django.conf.urls import url,include
 
 urlpatterns = [
     #url(r'^',include('apps.courses_app.urls')),
-    url(r'^',include('apps.login_registration.urls')),
+    #url(r'^',include('apps.login_registration.urls')),
+    url(r'^', include('apps.belt_review.urls')),
+    url(r'^books/',include('apps.books_app.urls')),
 ]
