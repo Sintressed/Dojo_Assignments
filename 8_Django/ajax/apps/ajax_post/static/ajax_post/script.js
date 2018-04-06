@@ -3,6 +3,7 @@ $(document).ready(function(){
         url: "notes/",
         success: function(response){
             $("#placeholder1").html(response)
+            console.log(response)
         },
     })
     $('#create_form').submit(function(e){

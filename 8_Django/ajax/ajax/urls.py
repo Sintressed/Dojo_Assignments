@@ -17,4 +17,5 @@ from django.conf.urls import url,include
 
 urlpatterns = [
     url(r'^ajax_post/',include('apps.ajax_post.urls') ),
+    url(r'^ajax_notes/', include('apps.ajax_notes.urls')),
 ]

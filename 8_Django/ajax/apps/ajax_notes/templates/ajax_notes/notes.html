@@ -1,0 +1,24 @@
+
+<html>
+    <head>
+        <title>Notes</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        {% load staticfiles %}
+        <script type="text/javascript"  src="{% static 'ajax_notes/notes_script.js'%}"></script>
+    </head>
+    <body>
+        {% for note in notes %}
+        <form action = "{% url 'delete' %}" method = "post" id = "notes_form">
+            {% csrf_token %}
+            {{note.title}} <a id = "delete">delete</a><br>
+            <div class = "desc">{{note.desc}}</dic>
+            <input type = "hidden" name = "noteid" value = "{{note.id}}">
+            <br>
+            _______________________________________________________________________<br>
+        </form>
+        <br>
+        {% endfor %}
+    </body>
+</html>
+
+

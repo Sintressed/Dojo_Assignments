@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ajax_Notes</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        {% load staticfiles %}
+        <script type="text/javascript"  src="{% static 'ajax_notes/notes_script.js'%}"></script>
+    </head>
+    <body>
+        Notes:
+        <br>_______________________________________________________________________<br><br>
+        <div id = "placeholder1">
+            Placeholder for notes
+        </div>
+        <form action = "{% url 'create' %}" method = "post">
+            {% csrf_token %}
+            <input type = "text" name = "title">
+            <input type = "submit" value = "Add Note">
+        </form>
+    </body>
+</html>
